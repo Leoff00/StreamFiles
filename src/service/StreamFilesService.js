@@ -1,12 +1,14 @@
+import { request } from "http";
 import { Readable, Writable } from "stream";
-
 export class StreamFilesService {
-  async execute(request, response) {
+  async execute(requestObj) {
     const readable = new Readable({
       read() {
-        this.push(JSON.stringify(`data streammed -> ${request}`));
+        this.push(`data streammed -> ${requestObj}`);
         this.push(null);
       },
     });
+
+    return readable;
   }
 }

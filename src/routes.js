@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { StreamFilesController } from "./controller/StreamFilesController.mjs";
+import { StreamFilesController } from "./controller/StreamFilesController.js";
 
 const router = Router();
 
